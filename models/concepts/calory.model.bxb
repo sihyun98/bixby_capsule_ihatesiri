@@ -1,3 +1,3 @@
-name (calory) {
+integer (calory) {
   description (__DESCRIPTION__)
 }

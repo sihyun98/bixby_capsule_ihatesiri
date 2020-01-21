@@ -1,34 +1,241 @@
 result-view{
-  match : Result(this)
+  match: Result(this)
 
   // dialogue
-  // message{
-  //   template ("음식 이름은 #{value(this.DESC_KOR)}입니다.")
-  // }
+  message{
+    template ("총 음식 섭취량을 확인하세요")
+  }
 
   //layout
+  // render {
+  //   list-of (this) {
+  //     where-each (food) {
+  //       cell-area {
+  //         slot2 {
+  //           content {
+  //             order (PrimarySecondary)
+  //             primary ("오늘 하루 섭취한 식품량은")
+  //             secondary ("#{value(food.NUTR_CONT1)} kcal #{value(food.NUTR_CONT2)} g #{value(food.NUTR_CONT3)} g #{value(food.NUTR_CONT4)} g #{value(food.NUTR_CONT5)} g #{value(food.NUTR_CONT6)} mg #{value(food.NUTR_CONT7)} mg #{value(food.NUTR_CONT8)} g #{value(food.NUTR_CONT9)}g")
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  
   render {
-    list-of (this) {
-      where-each (food) {
-        cell-area {
-          // slot1 {
-          //   image {
-          //     url ("#{value(item.imageUrls[0])}")
-          //     shape (Square)
-          //   }
-          // }
-          slot2 {
+    layout {
+      section {
+        content {
+          hbox {
             content {
-              order (PrimarySecondary)
-              //primary ("#{value(food.DESC_KOR)}")
-              secondary ("#{value(food.NUTR_CONT1)} kcal #{value(food.NUTR_CONT2)} g #{value(food.NUTR_CONT3)} g #{value(food.NUTR_CONT4)} g #{value(food.NUTR_CONT5)} g #{value(food.NUTR_CONT6)} mg #{value(food.NUTR_CONT7)} mg #{value(food.NUTR_CONT8)} g #{value(food.NUTR_CONT9)}g")
+              vbox {
+                content {
+                  single-line {
+                    text {
+                      value ("칼로리 총 합")
+                    }
+                  }
+                }
+              }
+              vbox {
+                content {
+                  single-line {
+                    if(this.NUTR_CONT1 > 2350){
+                      text {
+                        color (Red)
+                        value ("#{value(this.NUTR_CONT1)} kcal")
+                      }
+                    }
+                    else{
+                      text {
+                        color (Green)
+                        value ("#{value(this.NUTR_CONT1)} kcal")
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          hbox {
+            content {
+              vbox {
+                content {
+                  single-line {
+                    text {
+                      value ("탄수화물 총 합")
+                    }
+                  }
+                }
+              }
+              vbox {
+                content {
+                  single-line {
+                    if(this.NUTR_CONT2 > 370){
+                      text {
+                        color (Red)
+                        value ("#{value(this.NUTR_CONT2)} g")
+                      }
+                    }
+                    else{
+                      text {
+                        color (Green)
+                        value ("#{value(this.NUTR_CONT2)} g")
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          hbox {
+            content {
+              vbox {
+                content {
+                  single-line {
+                    text {
+                      value ("단백질 총 합")
+                    }
+                  }
+                }
+              }
+              vbox {
+                content {
+                  single-line {
+                    if(this.NUTR_CONT3 > 52.5){
+                      text {
+                        color (Red)
+                        value ("#{value(this.NUTR_CONT3)} g")
+                      }
+                    }
+                    else{
+                      text {
+                        color (Green)
+                        value ("#{value(this.NUTR_CONT3)} g")
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          hbox {
+            content {
+              vbox {
+                content {
+                  single-line {
+                    text {
+                      value ("지방 총 합")
+                    }
+                  }
+                }
+              }
+              vbox {
+                content {
+                  single-line {
+                    if(this.NUTR_CONT4 > 52.075){
+                      text {
+                        color (Red)
+                        value ("#{value(this.NUTR_CONT4)} g")
+                      }
+                    }
+                    else{
+                      text {
+                        color (Green)
+                        value ("#{value(this.NUTR_CONT4)} g")
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }
       }
+      //에너지 : 2350 kcal
+      //탄수화물 : 370 g
+      //단백질 : 52.5 g
+      //지방 : 52.075 g
+      
+      section {
+        content {
+          single-line {
+            if(this.NUTR_CONT1 > 2350){
+              text {
+                color (Red)
+                value ("#{value(this.NUTR_CONT1_PER)}%")
+                style (Detail_M)
+              }
+            }
+            else{
+              text {
+                color (Green)
+                value ("#{value(this.NUTR_CONT1_PER)}%")
+                style (Detail_M)
+              }
+            }
+          }
+          progress-bar (this.NUTR_CONT1_PER)
+
+          single-line {
+            if(this.NUTR_CONT2 > 370){
+              text {
+                color (Red)
+                value ("#{value(this.NUTR_CONT2_PER)}%")
+                style (Detail_M)
+              }
+            }
+            else{
+              text {
+                color (Green)
+                value ("#{value(this.NUTR_CONT2_PER)}%")
+                style (Detail_M)
+              }
+            }
+          }
+          progress-bar (this.NUTR_CONT2_PER)
+
+          single-line {
+            if(this.NUTR_CONT3 > 2350){
+              text {
+                color (Red)
+                value ("#{value(this.NUTR_CONT3_PER)}%")
+                style (Detail_M)
+              }
+            }
+            else{
+              text {
+                color (Green)
+                value ("#{value(this.NUTR_CONT3_PER)}%")
+                style (Detail_M)
+              }
+            }
+          }
+          progress-bar (this.NUTR_CONT3_PER)
+
+          single-line {
+            if(this.NUTR_CONT4 > 2350){
+              text {
+                color (Red)
+                value ("#{value(this.NUTR_CONT4_PER)}%")
+                style (Detail_M)
+              }
+            }
+            else{
+              text {
+                color (Green)
+                value ("#{value(this.NUTR_CONT4_PER)}%")
+                style (Detail_M)
+              }
+            }
+          }
+          progress-bar (this.NUTR_CONT4_PER)
+        }
+      }
     }
   }
-  
+
   conversation-drivers{
     conversation-driver{
       template ("")

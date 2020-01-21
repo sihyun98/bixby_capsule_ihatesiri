@@ -1,3 +1,3 @@
-name (cholesterol) {
+integer (protein_per) {
   description (__DESCRIPTION__)
 }

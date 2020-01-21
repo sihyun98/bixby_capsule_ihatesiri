@@ -1,0 +1,5 @@
+train (t-47wjd5h5uia2z9w0n4bh9kfub) {
+  utterance ("[g:FindFood] (치즈버거)[v:Food1] 밥 콩 우유")
+  plan (Y2BmEE+tSMwtyEnVK87ITy1JLS7RC0otLs0pYZDEkHDLzEtxy89PYRDDlAIKGzIwMTACMQOQZGQAASgfAA==)
+  last-modified (1579571073500)
+}

@@ -3,6 +3,26 @@ structure (Result) {
   //   type (Desc_Kor)
   //   min (Required)
   // }
+  property(item1){
+    type(Food1)
+    min (Optional)
+  }
+  property(item2){
+    type(Food2)
+    min (Optional)
+  }
+  property(item3){
+    type(Food3)
+    min (Optional)
+  }
+  property(item4){
+    type(Food4)
+    min (Optional)
+  }
+  property(item5){
+    type(Food5)
+    min (Optional)
+  }
   property (NUTR_CONT1){
     type(calory)
     min(Required)
@@ -19,25 +39,41 @@ structure (Result) {
     type(fat)
     min(Required)
   }
-  property (NUTR_CONT5){
-    type(sugars)
+  property (NUTR_CONT1_PER){
+    type(calory_per)
     min(Required)
   }
-  property (NUTR_CONT6){
-    type(salts)
+  property (NUTR_CONT2_PER){
+    type(carbohydrate_per)
     min(Required)
   }
-  property (NUTR_CONT7){
-    type(cholesterol)
+  property (NUTR_CONT3_PER){
+    type(protein_per)
     min(Required)
   }
-  property (NUTR_CONT8){
-    type(saturated_fatty_acid)
+  property (NUTR_CONT4_PER){
+    type(fat_per)
     min(Required)
   }
-  property (NUTR_CONT9){
-    type(trans_fat)
-    min(Required)
-  }
+  // property (NUTR_CONT5){
+  //   type(sugars)
+  //   min(Required)
+  // }
+  // property (NUTR_CONT6){
+  //   type(salts)
+  //   min(Required)
+  // }
+  // property (NUTR_CONT7){
+  //   type(cholesterol)
+  //   min(Required)
+  // }
+  // property (NUTR_CONT8){
+  //   type(saturated_fatty_acid)
+  //   min(Required)
+  // }
+  // property (NUTR_CONT9){
+  //   type(trans_fat)
+  //   min(Required)
+  // }
 
 }

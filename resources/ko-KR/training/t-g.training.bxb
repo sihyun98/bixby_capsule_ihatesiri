@@ -1,0 +1,5 @@
+train (t-gtyxn7urt0z9il67j1t5c7q1v) {
+  utterance ("[g:FindFood] (햄버거)[v:Food1] (샌드위치)[v:Food2] (콩)[v:Food3] (우유)[v:Food4]")
+  plan (Y2BjEE+tSMwtyEnVK87ITy1JLS7RC0otLs0pYZDEkHDLzEtxy89PYRDDlAIKG+IQN8IhboxD3ISBlYGRgYmBmYEFyGIAsmEQAVBUAAA=)
+  last-modified (1579581818182)
+}
