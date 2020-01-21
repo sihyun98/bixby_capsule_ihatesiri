@@ -1,0 +1,37 @@
+result-view{
+  match : Result(this)
+
+  // dialogue
+  // message{
+  //   template ("음식 이름은 #{value(this.DESC_KOR)}입니다.")
+  // }
+
+  //layout
+  render {
+    list-of (this) {
+      where-each (food) {
+        cell-area {
+          // slot1 {
+          //   image {
+          //     url ("#{value(item.imageUrls[0])}")
+          //     shape (Square)
+          //   }
+          // }
+          slot2 {
+            content {
+              order (PrimarySecondary)
+              //primary ("#{value(food.DESC_KOR)}")
+              secondary ("#{value(food.NUTR_CONT1)} kcal #{value(food.NUTR_CONT2)} g #{value(food.NUTR_CONT3)} g #{value(food.NUTR_CONT4)} g #{value(food.NUTR_CONT5)} g #{value(food.NUTR_CONT6)} mg #{value(food.NUTR_CONT7)} mg #{value(food.NUTR_CONT8)} g #{value(food.NUTR_CONT9)}g")
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  conversation-drivers{
+    conversation-driver{
+      template ("")
+    }
+  }
+}

@@ -1,0 +1,5 @@
+train (t-3c4us96ytt8vivddt7lte7gb8) {
+  utterance ([g:FindFood] 음식 보여줘)
+  plan (Y2BiEE2tSMwtyEnVK87ITy1JLS7Rc8vPT2GQxBTOzEsBSzECIQMUA0kA)
+  last-modified (1579506102793)
+}

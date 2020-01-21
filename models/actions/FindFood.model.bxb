@@ -1,0 +1,33 @@
+action (FindFood) {
+  description (Demonstrate a simple GET with the http library.)
+  type (Search)
+  collect {
+    input (item1) {
+      type (Food1)
+      min (Required)
+      max (One)
+    }
+    input (item2) {
+      type (Food2)
+      min (Optional)
+      max (One)
+    }
+    input (item3) {
+      type (Food3)
+      min (Optional)
+      max (One)
+    }
+    input (item4) {
+      type (Food4)
+      min (Optional)
+      max (One)
+    }
+    input (item5) {
+      type (Food5)
+      min (Optional)
+      max (One)
+    }
+
+  }
+  output (Result)
+}

@@ -1,0 +1,5 @@
+train (t-fazwlhq7padssjwx6rvax3yox) {
+  utterance ("[g:FindFood] (콩)[v:Food1] (콩)[v:Food2] (콩)[v:Food3] 콩 콩")
+  plan (Y2BlEE+tSMwtyEnVK87ITy1JLS7RC0otLs0pYZDEkHDLzEtxy89PYRDDlAIKG+IQN8IhbszAwsDIwMTADKQZgCwIhAEkOQA=)
+  last-modified (1579536142470)
+}

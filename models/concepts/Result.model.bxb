@@ -1,0 +1,43 @@
+structure (Result) {
+  // property (DESC_KOR){
+  //   type (Desc_Kor)
+  //   min (Required)
+  // }
+  property (NUTR_CONT1){
+    type(calory)
+    min(Required)
+  }
+  property (NUTR_CONT2){
+    type(carbohydrate)
+    min(Required)
+  }
+  property (NUTR_CONT3){
+    type(protein)
+    min(Required)
+  }
+  property (NUTR_CONT4){
+    type(fat)
+    min(Required)
+  }
+  property (NUTR_CONT5){
+    type(sugars)
+    min(Required)
+  }
+  property (NUTR_CONT6){
+    type(salts)
+    min(Required)
+  }
+  property (NUTR_CONT7){
+    type(cholesterol)
+    min(Required)
+  }
+  property (NUTR_CONT8){
+    type(saturated_fatty_acid)
+    min(Required)
+  }
+  property (NUTR_CONT9){
+    type(trans_fat)
+    min(Required)
+  }
+
+}
