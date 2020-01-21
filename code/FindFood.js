@@ -43,7 +43,7 @@ module.exports.function = function findFood (item1,item2,item3,item4,item5) {
       }
     }
     if(flag == false){
-      result[String('item'+(Number(i)+1))] = String(items[i])
+    result[String('item'+(Number(i)+1))] = String(items[i])
     }
   }
   var list = new Array(2350, 370, 52.5, 52.075)
@@ -52,5 +52,6 @@ module.exports.function = function findFood (item1,item2,item3,item4,item5) {
     result[String(tp+'_PER')] = Math.round((temp[k]/list[k])*100)
     result[tp] = Math.round(temp[k])
   }
+  console.log(result)
   return result;
 }

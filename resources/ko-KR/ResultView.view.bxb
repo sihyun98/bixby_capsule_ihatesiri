@@ -5,7 +5,7 @@ result-view{
   message{
     template ("총 섭취량 입니다 (1회 제공량 기준)")
   }
-
+  
   //layout
   // render {
   //   list-of (this) {
@@ -25,10 +25,55 @@ result-view{
   
   render {
     layout {
+      section{
+      content{
+      single-line {
+        if(this.item1 !='' || this.item2 !=''|| this.item3 !='' || this.item4 !='' || this.item5 != ''){
+        text  {
+          value {
+            template ("다음 음식은 찾지 못했습니다")
+          }
+          style (Title_S)
+        }
+        }
+        text  {
+          value ("#{value(this.item1)}")
+          color (Amber)
+          style (Detail_L)
+        }spacer
+        text  {
+          value ("#{value(this.item2)}")
+          color (Amber)
+          style (Detail_L)
+        }spacer
+        text {
+           value ("#{value(this.item3)}")
+           color (Amber)
+           style (Detail_L)
+        }spacer
+        text  {
+          value ("#{value(this.item4)}")
+          color (Amber)
+          style (Detail_L)
+        }
+        text  {
+          value ("#{value(this.item5)}")
+          color (Amber)
+          style (Detail_L)
+        }
+
+      }
+      }
+      }
+      
+      
+
+
+
       section {
         content {
           hbox {
-            content {
+            content {             
               vbox {
                 content {
                   single-line {
@@ -235,7 +280,7 @@ result-view{
       }
     }
   }
-
+  
   conversation-drivers{
     conversation-driver{
       template ("")
