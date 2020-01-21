@@ -3,7 +3,7 @@ result-view{
 
   // dialogue
   message{
-    template ("총 음식 섭취량을 확인하세요")
+    template ("총 섭취량 입니다 (1회 제공량 기준)")
   }
 
   //layout
@@ -165,14 +165,14 @@ result-view{
               text {
                 color (Red)
                 value ("#{value(this.NUTR_CONT1_PER)}%")
-                style (Detail_M)
+                style (Title_S)
               }
             }
             else{
               text {
                 color (Green)
                 value ("#{value(this.NUTR_CONT1_PER)}%")
-                style (Detail_M)
+                style (Title_S)
               }
             }
           }
@@ -183,50 +183,50 @@ result-view{
               text {
                 color (Red)
                 value ("#{value(this.NUTR_CONT2_PER)}%")
-                style (Detail_M)
+                style (Title_S)
               }
             }
             else{
               text {
                 color (Green)
                 value ("#{value(this.NUTR_CONT2_PER)}%")
-                style (Detail_M)
+                style (Title_S)
               }
             }
           }
           progress-bar (this.NUTR_CONT2_PER)
 
           single-line {
-            if(this.NUTR_CONT3 > 2350){
+            if(this.NUTR_CONT3 > 52.5){
               text {
                 color (Red)
                 value ("#{value(this.NUTR_CONT3_PER)}%")
-                style (Detail_M)
+                style (Title_S)
               }
             }
             else{
               text {
                 color (Green)
                 value ("#{value(this.NUTR_CONT3_PER)}%")
-                style (Detail_M)
+                style (Title_S)
               }
             }
           }
           progress-bar (this.NUTR_CONT3_PER)
 
           single-line {
-            if(this.NUTR_CONT4 > 2350){
+            if(this.NUTR_CONT4 > 52.075){
               text {
                 color (Red)
                 value ("#{value(this.NUTR_CONT4_PER)}%")
-                style (Detail_M)
+                style (Title_S)
               }
             }
             else{
               text {
                 color (Green)
                 value ("#{value(this.NUTR_CONT4_PER)}%")
-                style (Detail_M)
+                style (Title_S)
               }
             }
           }
